@@ -4,19 +4,20 @@ html {
 
 *,
 *:before,
-*:after div.container {
+*:after body{
   position: relative;
 }
 body {
   background-color: rgb(250, 243, 243);
   font-family: "Merriweather Sans", sans-serif;
   width: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 #header {
   position: fixed;
   top: 0;
   z-index: 5;
-
   align-items: center;
   width: 100%;
   background-color: rgb(228, 217, 217);
@@ -72,12 +73,12 @@ li {
   font-size: 1em;
 }
 #submit {
-  height: 30px;
-  width: 60%;
-  margin-left: 60px;
+  height: 48px;
+  width: 70%;
+  margin-left: 50px;
 
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.2em;
   background-color: rgb(248, 208, 105);
   border-radius: 3px;
 }
