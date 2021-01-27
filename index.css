@@ -4,15 +4,21 @@ html {
 
 *,
 *:before,
-*:after body{
+*:after body {
   position: relative;
 }
 body {
   background-color: rgb(250, 243, 243);
   font-family: "Merriweather Sans", sans-serif;
-  width: 100%;
+  max-width: 100%;
   margin: 0;
-  
+  overflow-x: hidden;
+}
+@media screen and (min-width: 800px) {
+  section {
+    width: 800px;
+    margin: auto;
+  }
 }
 #header {
   position: fixed;
@@ -21,13 +27,13 @@ body {
   align-items: center;
   width: 100%;
   background-color: rgb(228, 217, 217);
+  padding-top: 10px;
 }
 div.img-class {
-  width: 100%;
-  margin-right: 10px;
+  max-width: 100%;
 }
 #nav-bar {
-  width: 100%;
+  max-width: 80%;
 }
 @media screen and (min-width: 550px) {
   #header {
@@ -35,25 +41,27 @@ div.img-class {
     flex-wrap: nowrap;
   }
   div.img-class {
-    width: 40%;
+    max-width: 40%;
   }
   #nav-bar {
-    width: 60%;
+    width: 70%;
   }
   nav > ul {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
 
 nav > ul {
   display: flex;
-  font-size: 1.2em;
-  justify-content: space-around;
+  font-size: 1em;
+  justify-content: space-evenly;
 }
 
 li {
   list-style: none;
-  width: 100%;
+}
+body > section {
+  overscroll-behavior-x: hidden;
 }
 #section {
   margin-top: 120px;
@@ -63,61 +71,61 @@ li {
   align-items: center;
   max-width: 100%;
 }
+#section > h1 {
+  padding-left: 10px;
+  font-size: 1.1em;
+}
 
 #email {
-  height: 30px;
   width: 100%;
+  align-items: center;
+  padding: 10px;
   margin-bottom: 15px;
-  padding-left: 30px;
-  font-weight: 500;
+
   font-size: 1em;
 }
 #submit {
-  height: 48px;
-  width: 70%;
-  margin-left: 50px;
-
-  font-weight: bold;
-  font-size: 1.2em;
-  background-color: rgb(248, 208, 105);
-  border-radius: 3px;
+  height: 30px;
+  width: 60%;
+  margin-left: 55px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: rgb(236, 227, 208);
+  border-radius: 15px;
 }
 #submit:hover {
-  background-color: darkgoldenrod;
+  background-color: rgb(214, 213, 210);
+  box-shadow: -2px 14px 14px 4px rgba(190, 190, 177, 0.75);
 }
 #second-section {
-  margin-top: 50px;
+  margin: 5% 10%;
   width: 100%;
 }
 
 div.flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
+  padding-right: 15px;
   align-items: center;
-  margin-bottom: 50px;
 }
 @media screen and (min-width: 550px) {
   div.flex {
+    display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     gap: 30px;
     margin: auto;
   }
-  /*  .icon {
-    width:50px
-} */
 }
 .icon {
-  width: 30%;
+  max-width: 30%;
 }
 div.phrase {
-  width: 100%;
+  width: 90%;
   font-size: 1.2em;
   line-height: 1.5em;
-  padding-left: 20px;
-  margin: auto;
 }
 #third-section {
   display: flex;
@@ -132,7 +140,6 @@ div.phrase {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   margin-top: 50px;
   row-gap: 20px;
@@ -141,17 +148,18 @@ div.phrase {
 .block {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 400px;
+  border: 1px solid rgb(223, 205, 205);
+  border-radius: 6px;
   height: 400px;
   align-items: center;
+  background-color: rgb(250, 240, 247);
 }
 @media (min-width: 550px) {
   #last-section {
     flex-direction: row;
     column-gap: 20px;
     justify-content: center;
+    width: 100%;
   }
 }
 .block-header {
@@ -164,7 +172,7 @@ div.phrase {
 }
 h2 {
   margin-bottom: 30px;
-  font-size: xx-large;
+  font-size: 1.3em;
   font-weight: 600;
 }
 a {
@@ -172,37 +180,33 @@ a {
   color: rgb(71, 66, 66);
 }
 
-#footer {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-
-  background-color: rgb(230, 214, 214);
-  font-size: 1em;
-  padding-bottom: 5px;
-
-  border-radius: 2px;
-  margin-top: 20px;
-}
-.sub-footer {
-  display: flex;
-  width: 50%;
-  justify-content: space-between;
-  padding: 10px;
-}
 input.btn {
-  background-color: #ebdd66fb;
-  padding: 10px;
-  border-radius: 3px;
-  font-size: 1.6em;
+  background-color: #e2ddbbfb;
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 1em;
 }
 input.btn:hover {
-  background-color: darkgoldenrod;
+  background-color: rgb(248, 245, 237);
 }
 
 #video {
-  width: 50%;
+  max-width: 60%;
   height: 400px;
+}
+
+#footer {
+  display: grid;
+  width: 100%;
+  justify-content: space-around;
+  background-color: rgb(230, 214, 214);
+  font-size: 1em;
+  line-height: 1.2em;
+  padding-top: 10px;
+  margin-top: 10px;
+  position: absolute;
+}
+.sub-footer {
+  display: flex;
+  justify-content: space-between;
 }
