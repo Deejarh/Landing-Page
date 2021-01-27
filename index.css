@@ -69,11 +69,13 @@ body > section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
+  
 }
 #section > h1 {
   padding-left: 10px;
-  font-size: 1.1em;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 30px;
 }
 
 #email {
